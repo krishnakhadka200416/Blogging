@@ -12,9 +12,24 @@
               "description": "public"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authblogeb8a1d6a"
+              }
+            }
+          ]
         }
       }
+    }
+  },
+  "auth": {
+    "blogeb8a1d6a": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
     }
   }
 }
